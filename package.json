@@ -1,0 +1,66 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.prod.js --progress",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "lint:fix": "eslint --fix src/**/*.js src/**/*.jsx",
+    "local": "webpack serve --config ./config/webpack.dev.js --progress",
+    "local:test": "webpack serve --config ./config/webpack.test.js --progress"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.5",
+    "@babel/plugin-proposal-export-default-from": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "compression-webpack-plugin": "^9.2.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "file-loader": "^6.2.0",
+    "html-minimizer-webpack-plugin": "^3.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.1.0",
+    "prettier": "^2.5.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "thread-loader": "^3.0.4",
+    "warnings-to-errors-webpack-plugin": "^2.3.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2",
+    "webpack-font-preload-plugin": "^1.5.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "browserslist": [
+    "last 2 chrome version",
+    "last 2 firefox version",
+    "last 2 safari version",
+    "last 2 edge version"
+  ],
+  "engines": {
+    "node": ">=16.10.0",
+    "npm": ">=7.19.1"
+  }
+}
