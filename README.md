@@ -35,7 +35,6 @@ Must be one of the following:
 
 
 ##### Scope
-The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages).
 
 The following is the list of supported scopes:
 
