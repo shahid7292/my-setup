@@ -1,9 +1,11 @@
 import React from "react";
 
+const x=50;
+
 function App() {
-  return <div>Rendered App component
+  return <div>Rendered App component sddhjk 
   
-   </div>;
+  </div>;
 }
 
 export default App;

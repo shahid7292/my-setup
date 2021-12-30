@@ -13,7 +13,8 @@
     "lint:fix": "eslint --fix src/**/*.js src/**/*.jsx",
     "local": "webpack serve --config ./config/webpack.dev.js --progress",
     "local:test": "webpack serve --config ./config/webpack.test.js --progress",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -40,6 +41,8 @@
     "file-loader": "^6.2.0",
     "html-minimizer-webpack-plugin": "^3.5.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.4",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.1.0",
@@ -52,8 +55,7 @@
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.2",
     "webpack-font-preload-plugin": "^1.5.0",
-    "webpack-merge": "^5.8.0",
-    "husky": "^7.0.0"
+    "webpack-merge": "^5.8.0"
   },
   "browserslist": [
     "last 2 chrome version",
