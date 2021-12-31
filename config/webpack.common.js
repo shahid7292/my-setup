@@ -87,11 +87,14 @@ module.exports = {
         test: /\.png|svg|jpg|gif$/,
         use: ["file-loader"],
       },
+
       // Fonts
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"],
-        include: [/fonts/],
+        test: /\.(woff(2)?|eot|ttf|otf)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/fonts/[name][ext]",
+        },
       },
     ],
   },
