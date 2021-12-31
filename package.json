@@ -58,12 +58,19 @@
     "webpack-font-preload-plugin": "^1.5.0",
     "webpack-merge": "^5.8.0"
   },
-  "browserslist": [
-    "last 2 chrome version",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 2 chrome version",
     "last 2 firefox version",
     "last 2 safari version",
     "last 2 edge version"
-  ],
+    ]
+  },
   "engines": {
     "node": ">=16.10.0",
     "npm": ">=7.19.1"
