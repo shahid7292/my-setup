@@ -9,7 +9,7 @@ function Register() {
   const navigate = useNavigate();
   const handleRegister = () => {
     navigate("/auth/login");
-    toast.success("Logged in Successfully");
+    toast.success("Registered Successfully Please Login");
   };
 
   return (
