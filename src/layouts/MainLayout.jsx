@@ -1,17 +1,19 @@
 import React from "react";
-import { useNavigate, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar.jsx";
 import { appRoutes } from "../routes";
+import cookieService from "../services/cookies.js";
 
 function MainLayout() {
-  const navigate = useNavigate();
+  const isTokenAvailable = cookieService().isTokenAvailable();
   return (
     <div>
       <Sidebar />
       <div style={{ paddingLeft: "130px" }}>
         <button
           onClick={() => {
-            navigate("/auth", { replace: true });
+            cookieService().clearToken();
+            document.location.reload(true);
           }}
         >
           Logout
@@ -21,13 +23,30 @@ function MainLayout() {
             {appRoutes.map((route, index) => {
               return (
                 <Route
+                  exact
                   path={route.path}
-                  element={route.component()}
+                  element={
+                    isTokenAvailable ? (
+                      route.component()
+                    ) : (
+                      <Navigate to="/auth/login" />
+                    )
+                  }
                   key={index}
                 />
               );
             })}
-            <Route path="*" replace element={<Navigate to="home" />} />
+            <Route
+              path="*"
+              replace
+              element={
+                isTokenAvailable ? (
+                  <Navigate to="home" />
+                ) : (
+                  <Navigate to="/auth/login" />
+                )
+              }
+            />
           </Routes>
         </div>
       </div>

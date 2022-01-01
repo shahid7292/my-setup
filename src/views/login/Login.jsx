@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import { Input, Button } from "reactstrap";
 import { useNavigate, Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./login.scss";
+import cookieServices from "../../services/cookies.js";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const handleLogin = () => {
-    navigate("/app");
+    if (
+      email == "shahidraza.moulvi@aimedatsolutions.com" &&
+      password == "123456"
+    ) {
+      navigate("/app");
+      cookieServices().setAppToken({ access: "abcde" });
+      toast.success("Logged in Successfully");
+    } else {
+      toast.error("Invalid credentials");
+    }
   };
 
   return (
