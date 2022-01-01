@@ -1,13 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Users() {
-  return (
-    <div>
-      User Page
-      <Link to="home">Home</Link>
-    </div>
-  );
+  return <div>User Page</div>;
 }
 
 export default Users;

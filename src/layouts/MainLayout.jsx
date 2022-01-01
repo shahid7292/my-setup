@@ -1,23 +1,17 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import Sidebar from "../components/sidebar/Sidebar.jsx";
-import { appRoutes } from "../routes";
 import cookieService from "../services/cookies.js";
+import { appRoutes } from "../routes";
+import Sidebar from "../components/sidebar/Sidebar.jsx";
+import AppNavbar from "../components/appnavbar/AppNavbar.jsx";
 
 function MainLayout() {
   const isTokenAvailable = cookieService().isTokenAvailable();
   return (
     <div>
       <Sidebar />
-      <div style={{ paddingLeft: "130px" }}>
-        <button
-          onClick={() => {
-            cookieService().clearToken();
-            document.location.reload(true);
-          }}
-        >
-          Logout
-        </button>
+      <AppNavbar />
+      <div style={{ paddingLeft: "130px", paddingTop: "50px" }}>
         <div>
           <Routes>
             {appRoutes.map((route, index) => {
