@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { Input, Button } from "reactstrap";
 import { useNavigate, Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const handleRegister = () => {
+    navigate("/auth/login");
+    toast.success("Logged in Successfully");
+  };
 
   return (
     <div>
@@ -20,13 +25,7 @@ function Register() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button
-          onClick={() => {
-            navigate("/auth/login");
-          }}
-        >
-          Register
-        </Button>
+        <Button onClick={handleRegister}>Register</Button>
       </div>
 
       <p>
