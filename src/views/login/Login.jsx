@@ -10,10 +10,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const handleLogin = () => {
-    if (
-      email == "shahidraza.moulvi@aimedatsolutions.com" &&
-      password == "123456"
-    ) {
+    if (email == "test@example.com" && password == "123456") {
       navigate("/app");
       cookieServices().setAppToken({ access: "abcde" });
       toast.success("Logged in Successfully");
