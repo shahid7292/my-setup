@@ -20,20 +20,25 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <Input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <Input
-        type="email"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <Button onClick={handleLogin}>Login</Button>
+    <div>
+      <div>
+        <Input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="email"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button onClick={handleLogin}>Login</Button>
+      </div>
       <p>
-        Register <Link to="/auth/register">Here</Link>
+        {"Don't have an account yet?"}{" "}
+        <Link to="/auth/register" style={{ textDecoration: "none" }}>
+          {"Sign Up"}
+        </Link>
       </p>
     </div>
   );
