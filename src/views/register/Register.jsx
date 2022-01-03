@@ -21,7 +21,7 @@ function Register() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
-          type="email"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />

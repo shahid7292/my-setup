@@ -28,9 +28,10 @@ function Login() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
-          type="email"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="password-input"
         />
         <Button onClick={handleLogin}>Login</Button>
       </div>
