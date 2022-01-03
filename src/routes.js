@@ -1,5 +1,6 @@
 import Login from "./views/login/Login.jsx";
-import Register from "./views/register/Register.jsx";
+import Register from "./views/login/Register.jsx";
+import ForgotPassword from "./views/login/ForgotPassword.jsx";
 import Products from "./views/products/Products.jsx";
 import Support from "./views/support/Support.jsx";
 import Account from "./views/account/Account.jsx";
@@ -16,6 +17,12 @@ const routes = [
     name: "Register",
     path: "register",
     component: Register,
+  },
+  {
+    layout: "auth",
+    name: "Forgot Password",
+    path: "forgot-password",
+    component: ForgotPassword,
   },
   {
     layout: "app",

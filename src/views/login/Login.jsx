@@ -33,6 +33,9 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           className="password-input"
         />
+        <Link to="/auth/forgot-password" style={{ textDecoration: "none" }}>
+          {"Forgot password?"}
+        </Link>
         <Button onClick={handleLogin}>Login</Button>
       </div>
       <p>
