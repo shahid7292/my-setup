@@ -1,0 +1,21 @@
+.login-form-container {
+    display: flex;
+    justify-content: center;
+}
+.login-form-card {
+    width: 480px;
+    margin-top: 50px;
+    padding: 20px;
+}
+.forgot-password-link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-form-header {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Roboto, Arial;
+}

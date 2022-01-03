@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Button } from "reactstrap";
+import { Input, Button, Card } from "reactstrap";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./login.scss";
@@ -21,29 +21,36 @@ function Login() {
 
   return (
     <div>
-      <div>
-        <Input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <Input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="password-input"
-        />
-        <Link to="/auth/forgot-password" style={{ textDecoration: "none" }}>
-          {"Forgot password?"}
-        </Link>
-        <Button onClick={handleLogin}>Login</Button>
+      <div className="login-form-container">
+        <Card className="login-form-card">
+          <div className="login-form-header">Welcome Back</div>
+          <Input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <Input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="password-input"
+          />
+          <div className="forgot-password-link">
+            <Link to="/auth/forgot-password" style={{ textDecoration: "none" }}>
+              {"Forgot password?"}
+            </Link>
+          </div>
+          <Button onClick={handleLogin}>Login</Button>
+        </Card>
       </div>
-      <p>
-        {"Don't have an account yet?"}{" "}
-        <Link to="/auth/register" style={{ textDecoration: "none" }}>
-          {"Sign Up"}
-        </Link>
-      </p>
+      <div className="d-flex justify-content-center">
+        <p>
+          {"Don't have an account yet?"}{" "}
+          <Link to="/auth/register" style={{ textDecoration: "none" }}>
+            {"Sign Up"}
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }
