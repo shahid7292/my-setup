@@ -43,14 +43,7 @@ function Login() {
           <Button onClick={handleLogin}>Login</Button>
         </Card>
       </div>
-      <div className="d-flex justify-content-center">
-        <p>
-          {"Don't have an account yet?"}{" "}
-          <Link to="/auth/register" style={{ textDecoration: "none" }}>
-            {"Sign Up"}
-          </Link>
-        </p>
-      </div>
+     
     </div>
   );
 }
