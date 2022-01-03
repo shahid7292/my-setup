@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Input, Button, Card } from "reactstrap";
+import { Input, Button, Card } from "antd";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { HiOutlineMail } from "react-icons/hi";
+import { RiLockPasswordLine } from "react-icons/ri";
 import "./login.scss";
 
 function Register() {
@@ -22,16 +24,23 @@ function Register() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
           />
           <Input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}
           />
-          <Button onClick={handleRegister}>Register</Button>
+          <Button
+            onClick={handleRegister}
+            style={{ width: "100%", backgroundColor: "#007bfc" }}
+          >
+            Register
+          </Button>
         </Card>
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="login-link-text">
         <p>
           {"Already a member? "}
           <Link to="/auth/login" style={{ textDecoration: "none" }}>

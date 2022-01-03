@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "antd/dist/antd.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";

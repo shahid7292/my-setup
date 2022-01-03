@@ -1,36 +1,32 @@
 import React from "react";
 import { NavLink as NavLinkRRD } from "react-router-dom";
-import { Nav, Navbar, NavItem } from "reactstrap";
 
 import "./sidebar.scss";
 import { sidebarRoutes } from "../../routes.js";
 const Sidebar = () => {
   const createLinks = () => {
     return (
-      <div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {sidebarRoutes.map((route, index) => {
           return (
-            <NavItem key={index}>
-              <NavLinkRRD
-                to={`/app/${route.path}`}
-                className={({ isActive }) =>
-                  `sidebar-option  ${isActive ? "active-sidebar" : ""}`
-                }
-              >
-                {route.name}
-              </NavLinkRRD>
-            </NavItem>
+            <NavLinkRRD
+              to={`/app/${route.path}`}
+              className={({ isActive }) =>
+                `sidebar-option  ${isActive ? "active-sidebar" : ""}`
+              }
+              key={index}
+            >
+              {route.name}
+            </NavLinkRRD>
           );
         })}
       </div>
     );
   };
   return (
-    <Navbar expand="md" id="sidenav-main">
-      <Nav navbar style={{ marginLeft: "-12px" }}>
-        {createLinks()}
-      </Nav>
-    </Navbar>
+    <div id="sidenav-main">
+      <div>{createLinks()}</div>
+    </div>
   );
 };
 

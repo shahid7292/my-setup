@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Input, Button, Card } from "reactstrap";
+import { Input, Button, Card } from "antd";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./login.scss";
 import cookieServices from "../../services/cookies.js";
+import { HiOutlineMail } from "react-icons/hi";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -28,22 +30,29 @@ function Login() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
           />
           <Input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="password-input"
+            prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}
           />
           <div className="forgot-password-link">
             <Link to="/auth/forgot-password" style={{ textDecoration: "none" }}>
               {"Forgot password?"}
             </Link>
           </div>
-          <Button onClick={handleLogin}>Login</Button>
+          <Button
+            onClick={handleLogin}
+            style={{ width: "100%", backgroundColor: "#007bfc" }}
+          >
+            Login
+          </Button>
         </Card>
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="login-link-text">
         <p>
           {"Don't have an account yet?"}{" "}
           <Link to="/auth/register" style={{ textDecoration: "none" }}>
