@@ -1,7 +1,8 @@
-import Home from "./views/home/Home.jsx";
-import Users from "./views/users/Users.jsx";
 import Login from "./views/login/Login.jsx";
 import Register from "./views/register/Register.jsx";
+import Products from "./views/products/Products.jsx";
+import Support from "./views/support/Support.jsx";
+import Account from "./views/account/Account.jsx";
 
 const routes = [
   {
@@ -18,16 +19,23 @@ const routes = [
   },
   {
     layout: "app",
-    path: "home",
-    name: "Home",
-    component: Home,
+    path: "products",
+    name: "Products",
+    component: Products,
     showInSidebar: true,
   },
   {
     layout: "app",
-    path: "users",
-    name: "Users",
-    component: Users,
+    path: "support",
+    name: "Support",
+    component: Support,
+    showInSidebar: true,
+  },
+  {
+    layout: "app",
+    path: "account",
+    name: "Account",
+    component: Account,
     showInSidebar: true,
   },
 ];

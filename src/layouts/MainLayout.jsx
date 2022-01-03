@@ -35,7 +35,7 @@ function MainLayout() {
               replace
               element={
                 isTokenAvailable ? (
-                  <Navigate to="home" />
+                  <Navigate to="products" />
                 ) : (
                   <Navigate to="/auth/login" />
                 )
