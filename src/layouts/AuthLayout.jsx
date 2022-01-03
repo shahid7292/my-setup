@@ -1,15 +1,13 @@
-import React, { useEffect } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { authRoutes } from "../routes.js";
-import cookieservices from "../services/cookies.js";
 
 function AuthLayout() {
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (cookieservices().isTokenAvailable()) {
-      navigate("/app");
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   if (cookieservices().isTokenAvailable()) {
+  //     navigate("/app");
+  //   }
+  // }, [navigate]);
   return (
     <div>
       <Routes>
