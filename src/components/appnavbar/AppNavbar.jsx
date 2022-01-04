@@ -29,7 +29,7 @@ function AppNavbar() {
             style={{
               color: "#007bfc",
               fontSize: "12px",
-              //paddingLeft: "10px",
+              marginLeft: "-20px",
               fontWeight: "bold",
             }}
           >
