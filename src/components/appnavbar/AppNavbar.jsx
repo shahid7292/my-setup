@@ -3,6 +3,7 @@ import "./appnavbar.scss";
 import cookieService from "../../services/cookies.js";
 import { Menu, Dropdown, Tooltip } from "antd";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function AppNavbar() {
   const menu = (
@@ -38,7 +39,16 @@ function AppNavbar() {
 
         <Menu.Item style={{ marginLeft: "auto" }}>
           <Tooltip placement="bottom" title={text}>
-            <i className="fas fa-envelope" style={{ marginRight: "-20px" }}></i>
+            <Link to="support">
+              <i
+                className="fas fa-envelope"
+                style={{
+                  marginRight: "-20px",
+                  color: "#8692b0",
+                  fontSize: "20px",
+                }}
+              ></i>
+            </Link>
           </Tooltip>
         </Menu.Item>
 
