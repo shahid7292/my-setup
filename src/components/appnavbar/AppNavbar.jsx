@@ -2,6 +2,7 @@ import React from "react";
 import "./appnavbar.scss";
 import cookieService from "../../services/cookies.js";
 import { Menu, Dropdown, Tooltip } from "antd";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 function AppNavbar() {
   const menu = (
@@ -50,7 +51,7 @@ function AppNavbar() {
               style={{ marginLeft: "20px", marginRight: "15px" }}
             ></i>
             <span className="user_Name">Mr.Alex</span>
-            <i className="fas fa-chevron-circle-down"></i>
+            <MdKeyboardArrowDown />
           </Menu.Item>
         </Dropdown>
       </Menu>
