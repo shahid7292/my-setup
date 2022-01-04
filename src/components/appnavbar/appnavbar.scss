@@ -13,3 +13,28 @@
 .ant-menu-item::after {
     border-bottom: none !important;
 }
+.ant-menu-horizontal {
+    line-height: 35px;
+    padding: 0px 30px 0px 30px;
+}
+.ant-dropdown-placement-bottomRight > .ant-dropdown-arrow {
+    right: 25px;
+}
+.ant-dropdown {
+    width: 13%;
+}
+.user_Name {
+    padding-right: 10px;
+    margin-left: -10px;
+    font-size: 17px;
+}
+
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+    background-color: #c9f4ff;
+    color: #007bfc;
+}
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+    font-size: 16px;
+}

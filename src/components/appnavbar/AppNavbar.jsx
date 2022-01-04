@@ -28,7 +28,7 @@ function AppNavbar() {
               style={{
                 color: "#007bfc",
                 fontSize: "12px",
-                paddingLeft: "10px",
+                //paddingLeft: "10px",
                 fontWeight: "bold",
               }}
             >
@@ -38,7 +38,10 @@ function AppNavbar() {
 
           <Menu.Item style={{ marginLeft: "auto" }}>
             <Tooltip placement="bottom" title={text}>
-              <i className="fas fa-envelope"></i>
+              <i
+                className="fas fa-envelope"
+                style={{ marginRight: "-20px" }}
+              ></i>
             </Tooltip>
           </Menu.Item>
           <Menu.Item>
@@ -46,8 +49,11 @@ function AppNavbar() {
           </Menu.Item>
 
           <Dropdown overlay={menu} placement="bottomRight" arrow>
-            <Menu.Item style={{ fontSize: "17px", color: "#8692b0" }}>
-              Mr.Alex
+            <Menu.Item
+              style={{ fontSize: "17px", color: "#8692b0", paddingLeft: "0px" }}
+            >
+              <span className="user_Name">Mr.Alex</span>
+              <i className="fas fa-chevron-circle-down"></i>
             </Menu.Item>
           </Dropdown>
         </Menu>
