@@ -32,7 +32,6 @@ function Register() {
                   message: "The input is not valid E-mail!",
                 },
               ]}
-              hasFeedback
             >
               <Input
                 prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
@@ -54,13 +53,13 @@ function Register() {
                       })
                     ) {
                       return Promise.resolve();
+                    } else {
+                      return Promise.reject(
+                        new Error(
+                          "Password should contain 1 Uppercase charecter, 1 Lowercase charecter, 1 Number and should have Length of 8"
+                        )
+                      );
                     }
-
-                    return Promise.reject(
-                      new Error(
-                        "Password should contain 1 Uppercase charecter, 1 Lowercase charecter, 1 Number and should have Length of 8"
-                      )
-                    );
                   },
                 }),
               ]}

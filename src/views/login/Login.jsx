@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { Input, Button, Card } from "antd";
+import { Input, Button, Card, Form } from "antd";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./login.scss";
 import cookieServices from "../../services/cookies.js";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { AiOutlineEyeInvisible, AiFillEye } from "react-icons/ai";
 
 function Login() {
+  const [form] = Form.useForm();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -26,28 +28,32 @@ function Login() {
       <div className="login-form-container">
         <Card className="login-form-card">
           <div className="login-form-header">Welcome Back</div>
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
-          />
-          <Input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="password-input"
-            prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}
-          />
+          <Form form={form}>
+            <Form.Item>
+              <Input
+                type={"email"}
+                prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+            </Form.Item>
+            <Form.Item>
+              <Input.Password
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}
+                iconRender={(visible) =>
+                  visible ? <AiFillEye /> : <AiOutlineEyeInvisible />
+                }
+              />
+            </Form.Item>
+          </Form>
           <div className="forgot-password-link">
             <Link to="/auth/forgot-password" style={{ textDecoration: "none" }}>
               {"Forgot password?"}
             </Link>
           </div>
-          <Button
-            onClick={handleLogin}
-            style={{ width: "100%", backgroundColor: "#007bfc" }}
-          >
+          <Button onClick={handleLogin} block type="primary">
             Login
           </Button>
         </Card>

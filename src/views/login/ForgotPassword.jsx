@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Input, Button, Card } from "antd";
+import { Input, Button, Card, Form } from "antd";
+
 import { Link } from "react-router-dom";
 import { HiOutlineMail } from "react-icons/hi";
 import "./login.scss";
 function Register() {
+  const [form] = Form.useForm();
   const [email, setEmail] = useState("");
   const handleRegister = () => {};
 
@@ -12,16 +14,17 @@ function Register() {
       <div className="login-form-container">
         <Card className="login-form-card">
           <div className="login-form-header">Forgot Password</div>
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
-          />
-          <Button
-            onClick={handleRegister}
-            style={{ width: "100%", backgroundColor: "#007bfc" }}
-          >
+          <Form form={form}>
+            <Form.Item>
+              <Input
+                type={"email"}
+                prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+            </Form.Item>
+          </Form>
+          <Button onClick={handleRegister} block type="primary">
             Retrieve Password
           </Button>
         </Card>
