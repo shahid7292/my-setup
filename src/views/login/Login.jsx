@@ -58,7 +58,7 @@ function Login() {
           </Button>
         </Card>
       </div>
-      <div className="login-link-text">
+      <div className="signup-link-text">
         <p>
           {"Don't have an account yet?"}{" "}
           <Link to="/auth/register" style={{ textDecoration: "none" }}>

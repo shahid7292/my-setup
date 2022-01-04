@@ -6,7 +6,7 @@ import Validator from "validator";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { AiOutlineEyeInvisible, AiFillEye } from "react-icons/ai";
-import "./login.scss";
+import "./register.scss";
 
 function Register() {
   const [form] = Form.useForm();
@@ -20,9 +20,9 @@ function Register() {
 
   return (
     <div>
-      <div className="login-form-container">
-        <Card className="login-form-card">
-          <div className="login-form-header">Create Account</div>
+      <div className="register-form-container">
+        <Card className="register-form-card">
+          <div className="register-form-header">Create Account</div>
           <Form form={form}>
             <Form.Item
               name="email"
@@ -75,7 +75,7 @@ function Register() {
             </Form.Item>
           </Form>
           <Button onClick={handleRegister} block type="primary">
-            Register
+            Create Account
           </Button>
         </Card>
       </div>
