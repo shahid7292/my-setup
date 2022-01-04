@@ -52,7 +52,12 @@ function AppNavbar() {
           </Tooltip>
         </Menu.Item>
 
-        <Dropdown overlay={menu} placement="bottomRight" arrow>
+        <Dropdown
+          overlay={menu}
+          placement="bottomRight"
+          trigger={["hover", "click"]}
+          arrow
+        >
           <Menu.Item
             style={{ fontSize: "17px", color: "#8692b0", paddingLeft: "0px" }}
           >
@@ -61,7 +66,9 @@ function AppNavbar() {
               style={{ marginLeft: "20px", marginRight: "15px" }}
             ></i>
             <span className="user_Name">Mr.Alex</span>
-            <MdKeyboardArrowDown />
+            <span style={{ position: "absolute", paddingTop: "3px" }}>
+              <MdKeyboardArrowDown />
+            </span>
           </Menu.Item>
         </Dropdown>
       </Menu>
