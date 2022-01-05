@@ -6,7 +6,7 @@ import Validator from "validator";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { AiOutlineEyeInvisible, AiFillEye } from "react-icons/ai";
-import "./login.scss";
+import "./register.scss";
 
 function Register() {
   const [form] = Form.useForm();
@@ -20,9 +20,14 @@ function Register() {
 
   return (
     <div>
-      <div className="login-form-container">
-        <Card className="login-form-card">
-          <div className="login-form-header">Create Account</div>
+      <div className="register-form-container">
+        <Card className="register-form-card">
+          <div className="register-form-header">Create Account</div>
+          <div className="register-box-text">
+            {
+              "You're moments away from launching a blazing fast SSD Cloud Server. Enter your email and create a password to get started!"
+            }
+          </div>
           <Form form={form}>
             <Form.Item
               name="email"
@@ -34,6 +39,7 @@ function Register() {
               ]}
             >
               <Input
+                placeholder="Email Address"
                 prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
@@ -65,6 +71,7 @@ function Register() {
               ]}
             >
               <Input.Password
+                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}
@@ -75,7 +82,7 @@ function Register() {
             </Form.Item>
           </Form>
           <Button onClick={handleRegister} block type="primary">
-            Register
+            Create Account
           </Button>
         </Card>
       </div>

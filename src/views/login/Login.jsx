@@ -31,6 +31,7 @@ function Login() {
           <Form form={form}>
             <Form.Item>
               <Input
+                placeholder="Email Address"
                 type={"email"}
                 prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
                 onChange={(e) => setEmail(e.target.value)}
@@ -39,6 +40,7 @@ function Login() {
             </Form.Item>
             <Form.Item>
               <Input.Password
+                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}
@@ -58,7 +60,7 @@ function Login() {
           </Button>
         </Card>
       </div>
-      <div className="login-link-text">
+      <div className="signup-link-text">
         <p>
           {"Don't have an account yet?"}{" "}
           <Link to="/auth/register" style={{ textDecoration: "none" }}>

@@ -3,7 +3,7 @@ import { Input, Button, Card, Form } from "antd";
 
 import { Link } from "react-router-dom";
 import { HiOutlineMail } from "react-icons/hi";
-import "./login.scss";
+import "./forgotPassword.scss";
 function Register() {
   const [form] = Form.useForm();
   const [email, setEmail] = useState("");
@@ -11,12 +11,16 @@ function Register() {
 
   return (
     <div>
-      <div className="login-form-container">
-        <Card className="login-form-card">
-          <div className="login-form-header">Forgot Password</div>
+      <div className="forgotPassword-form-container">
+        <Card className="forgotPassword-form-card">
+          <div className="forgotPassword-form-header">Forgot Password</div>
+          <div className="forgotPassword-box-text">
+            Enter your email address to retrieve your password
+          </div>
           <Form form={form}>
             <Form.Item>
               <Input
+                placeholder="Email Address"
                 type={"email"}
                 prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
                 onChange={(e) => setEmail(e.target.value)}

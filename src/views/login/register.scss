@@ -1,15 +1,15 @@
-.login-form-container {
+.register-form-container {
     display: flex;
     justify-content: center;
 }
-.login-form-card {
+.register-form-card {
     width: 480px;
     margin-top: 120px;
     padding: 20px;
     border-radius: 10px;
 }
 
-.login-form-header {
+.register-form-header {
     display: flex;
     justify-content: center;
     font-size: 30px;
@@ -18,13 +18,16 @@
     font-family: "Roboto", Arial;
 }
 
-.forgot-password-link {
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 12px;
+.register-box-text {
+    margin-top: -12px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 16px;
+    font-family: "Roboto", Arial;
 }
 
-.signup-link-text {
+.login-link-text {
     display: flex;
     justify-content: center;
     padding: 20px;
