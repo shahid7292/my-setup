@@ -22,7 +22,7 @@ function AppNavbar() {
       <Menu.Item
         onClick={() => {
           cookieService().clearToken();
-          document.location.reload(true);
+          navigate("/auth/login");
         }}
       >
         Logout

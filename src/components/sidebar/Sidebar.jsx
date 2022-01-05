@@ -6,7 +6,13 @@ import { sidebarRoutes } from "../../routes.js";
 const Sidebar = () => {
   const createLinks = () => {
     return (
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "stretch",
+        }}
+      >
         {sidebarRoutes.map((route, index) => {
           return (
             <NavLinkRRD
@@ -25,7 +31,19 @@ const Sidebar = () => {
   };
   return (
     <div id="sidenav-main">
-      <div>{createLinks()}</div>
+      <div
+        style={{
+          minHeight: "100px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: "30px",
+          color: "white",
+        }}
+      >
+        Logo
+      </div>
+      <div style={{}}>{createLinks()}</div>
     </div>
   );
 };
