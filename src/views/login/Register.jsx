@@ -23,6 +23,11 @@ function Register() {
       <div className="register-form-container">
         <Card className="register-form-card">
           <div className="register-form-header">Create Account</div>
+          <div className="register-box-text">
+            {
+              "You're moments away from launching a blazing fast SSD Cloud Server. Enter your email and create a password to get started!"
+            }
+          </div>
           <Form form={form}>
             <Form.Item
               name="email"
@@ -34,6 +39,7 @@ function Register() {
               ]}
             >
               <Input
+                placeholder="Email Address"
                 prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
@@ -65,6 +71,7 @@ function Register() {
               ]}
             >
               <Input.Password
+                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}

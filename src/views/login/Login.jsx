@@ -31,6 +31,7 @@ function Login() {
           <Form form={form}>
             <Form.Item>
               <Input
+                placeholder="Email Address"
                 type={"email"}
                 prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
                 onChange={(e) => setEmail(e.target.value)}
@@ -39,6 +40,7 @@ function Login() {
             </Form.Item>
             <Form.Item>
               <Input.Password
+                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 prefix={<RiLockPasswordLine style={{ fontSize: "20px" }} />}

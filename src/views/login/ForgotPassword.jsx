@@ -14,9 +14,13 @@ function Register() {
       <div className="forgotPassword-form-container">
         <Card className="forgotPassword-form-card">
           <div className="forgotPassword-form-header">Forgot Password</div>
+          <div className="forgotPassword-box-text">
+            Enter your email address to retrieve your password
+          </div>
           <Form form={form}>
             <Form.Item>
               <Input
+                placeholder="Email Address"
                 type={"email"}
                 prefix={<HiOutlineMail style={{ fontSize: "20px" }} />}
                 onChange={(e) => setEmail(e.target.value)}
