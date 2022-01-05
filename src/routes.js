@@ -4,7 +4,6 @@ import ForgotPassword from "./views/login/ForgotPassword.jsx";
 import Products from "./views/products/Products.jsx";
 import Support from "./views/support/Support.jsx";
 import Account from "./views/account/Account.jsx";
-import Profile from "./views/profile/Profile.jsx";
 
 const routes = [
   {
@@ -31,13 +30,6 @@ const routes = [
     name: "Products",
     component: Products,
     showInSidebar: true,
-  },
-  {
-    layout: "app",
-    path: "profile",
-    name: "Profile",
-    component: Profile,
-    showInSidebar: false,
   },
   {
     layout: "app",

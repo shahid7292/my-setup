@@ -13,7 +13,7 @@ function AppNavbar() {
     <Menu>
       <Menu.Item
         onClick={() => {
-          navigate("/app/profile");
+          navigate("/app/account");
         }}
       >
         Profile
