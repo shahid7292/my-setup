@@ -6,14 +6,8 @@
     border-bottom: 1px solid #e6e7eb;
     padding: 3px 30px 0px 30px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     min-height: 40px;
-}
-
-.user_Name {
-    padding-right: 10px;
-    margin-left: -10px;
-    font-size: 17px;
 }
 
 .navbar-dropdown {

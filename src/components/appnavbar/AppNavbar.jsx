@@ -32,7 +32,7 @@ function AppNavbar() {
   const text = <span>View Tickets</span>;
   return (
     <div className="app-navbar-main">
-      <div>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <span
           style={{
             color: "#007bfc",
@@ -45,18 +45,22 @@ function AppNavbar() {
         </span>
       </div>
 
-      <div style={{ marginLeft: "auto" }}>
+      <div
+        style={{ marginLeft: "auto", display: "flex", alignItems: "center" }}
+      >
         <div
-          style={{ padding: "4px 20px 0px 0px" }}
           onClick={() => {
             navigate("/app/support");
+          }}
+          style={{
+            display: "flex",
+            alignItems: "center",
           }}
         >
           <Tooltip placement="bottom" title={text}>
             <i
               className="fas fa-envelope link-to-supprt"
               style={{
-                marginRight: "-20px",
                 color: "#8692b0",
                 fontSize: "20px",
               }}
@@ -76,15 +80,28 @@ function AppNavbar() {
             fontSize: "17px",
             color: "#8692b0",
             paddingRight: "30px",
+            display: "flex",
+            alignItems: "baseline",
+            paddingTop: "4px",
           }}
         >
           <i
             className="fas fa-user-circle"
             style={{ marginLeft: "20px", marginRight: "15px" }}
           ></i>
-          <span className="user_Name">Mr.Alex</span>
-          <span style={{ position: "absolute", paddingTop: "3px" }}>
-            <MdKeyboardArrowDown />
+          <span
+            className="user_Name"
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            Mr.Alex
+          </span>
+          <span style={{ position: "relative" }}>
+            <span style={{ position: "absolute", top: "-17px" }}>
+              <MdKeyboardArrowDown />
+            </span>
           </span>
         </div>
       </Dropdown>
