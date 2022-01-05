@@ -11,7 +11,7 @@ function MainLayout() {
     <div>
       <Sidebar />
       <AppNavbar />
-      <div style={{ paddingLeft: "130px", paddingTop: "50px" }}>
+      <div style={{ paddingLeft: "130px", paddingTop: "40px" }}>
         <div>
           <Routes>
             {appRoutes.map((route, index) => {

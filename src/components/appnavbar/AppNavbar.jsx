@@ -23,21 +23,21 @@ function AppNavbar() {
   const text = <span>View Tickets</span>;
   return (
     <div className="app-navbar-main">
-      <Menu theme="light" mode="horizontal">
-        <Menu.Item>
-          <span
-            style={{
-              color: "#007bfc",
-              fontSize: "12px",
-              marginLeft: "-20px",
-              fontWeight: "bold",
-            }}
-          >
-            NEWS:{" "}
-          </span>
-        </Menu.Item>
+      <div>
+        <span
+          style={{
+            color: "#007bfc",
+            fontSize: "12px",
+            fontWeight: "bold",
+            fontFamily: "Roboto, Arial",
+          }}
+        >
+          NEWS:{" "}
+        </span>
+      </div>
 
-        <Menu.Item style={{ marginLeft: "auto" }}>
+      <div style={{ marginLeft: "auto" }}>
+        <div style={{ padding: "3px 20px 0px 0px" }}>
           <Tooltip placement="bottom" title={text}>
             <Link to="support">
               <i
@@ -50,28 +50,32 @@ function AppNavbar() {
               ></i>
             </Link>
           </Tooltip>
-        </Menu.Item>
-
-        <Dropdown
-          overlay={menu}
-          placement="bottomRight"
-          trigger={["hover", "click"]}
-          arrow
+        </div>
+      </div>
+      <Dropdown
+        overlay={menu}
+        placement="bottomRight"
+        trigger={["hover", "click"]}
+        arrow
+        overlayClassName={"navbar-dropdown"}
+      >
+        <div
+          style={{
+            fontSize: "17px",
+            color: "#8692b0",
+            paddingRight: "30px",
+          }}
         >
-          <Menu.Item
-            style={{ fontSize: "17px", color: "#8692b0", paddingLeft: "0px" }}
-          >
-            <i
-              className="fas fa-user-circle"
-              style={{ marginLeft: "20px", marginRight: "15px" }}
-            ></i>
-            <span className="user_Name">Mr.Alex</span>
-            <span style={{ position: "absolute", paddingTop: "3px" }}>
-              <MdKeyboardArrowDown />
-            </span>
-          </Menu.Item>
-        </Dropdown>
-      </Menu>
+          <i
+            className="fas fa-user-circle"
+            style={{ marginLeft: "20px", marginRight: "15px" }}
+          ></i>
+          <span className="user_Name">Mr.Alex</span>
+          <span style={{ position: "absolute", paddingTop: "3px" }}>
+            <MdKeyboardArrowDown />
+          </span>
+        </div>
+      </Dropdown>
     </div>
   );
 }

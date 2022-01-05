@@ -3,31 +3,21 @@
     top: 0;
     left: 130px;
     width: calc(100% - 130px);
-    border-bottom: 1px solid rgb(167, 156, 156);
+    border-bottom: 1px solid #e6e7eb;
+    padding: 3px 30px 0px 30px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+}
 
-    .ant-menu {
-        font-size: 20px;
-        color: #8692b0;
-    }
-    .ant-menu-item::after {
-        border-bottom: none !important;
-    }
-    .ant-menu-horizontal {
-        line-height: 40px;
-        padding: 0px 30px 0px 30px;
-    }
-    .ant-dropdown-placement-bottomRight > .ant-dropdown-arrow {
-        right: 25px;
-    }
-    .ant-dropdown {
-        width: 13%;
-    }
-    .user_Name {
-        padding-right: 10px;
-        margin-left: -10px;
-        font-size: 17px;
-    }
+.user_Name {
+    padding-right: 10px;
+    margin-left: -10px;
+    font-size: 17px;
+}
 
+.navbar-dropdown {
+    width: 13%;
     .ant-dropdown-menu-item:hover,
     .ant-dropdown-menu-submenu-title:hover {
         background-color: #c9f4ff;
