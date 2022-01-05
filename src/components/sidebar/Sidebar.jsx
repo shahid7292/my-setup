@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink as NavLinkRRD } from "react-router-dom";
+import Logo from "../../assets/images/brand/logo_small.2043544169.svg";
 
 import "./sidebar.scss";
 import { sidebarRoutes } from "../../routes.js";
@@ -33,15 +34,14 @@ const Sidebar = () => {
     <div id="sidenav-main">
       <div
         style={{
-          minHeight: "100px",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
-          fontSize: "30px",
-          color: "white",
+          padding: "20px 0px",
         }}
       >
-        Logo
+        <div style={{ width: "50px" }}>
+          <img src={Logo} alt="logo"></img>
+        </div>
       </div>
       <div style={{}}>{createLinks()}</div>
     </div>

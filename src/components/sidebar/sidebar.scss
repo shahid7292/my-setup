@@ -1,22 +1,27 @@
 #sidenav-main {
-    background-color: #142467;
-    color: rgba($color: #fff, $alpha: 0.7);
+    background-color: white;
     width: 130px;
     position: fixed;
     left: 0px;
     top: 0px;
     bottom: 0px;
+    border-right: 1px solid #e6e7eb;
+    // box-shadow: opx opx 1px rgba(0, 0, 0, 0.12),
+    //     0px 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .sidebar-option {
+    color: black;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
-    color: white;
-}
-
-.active-sidebar {
-    background-color: #142149;
+    padding: 5px 0px;
     font-size: 16px;
     font-family: "Roboto", Arial;
     font-weight: normal;
-    color: #fff;
+}
+
+.active-sidebar {
+    background-color: #f1f5fe;
+    color: #007bfc;
 }
