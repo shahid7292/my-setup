@@ -5,20 +5,18 @@ import "./appnavbar.scss";
 import cookieService from "../../services/cookies.js";
 import { Menu, Dropdown, Tooltip } from "antd";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function AppNavbar() {
   const navigate = useNavigate();
   const menu = (
     <Menu>
-      <Menu.Item>
-        <span
-          onClick={() => {
-            navigate("/app/profile");
-          }}
-        >
-          Profile
-        </span>
+      <Menu.Item
+        onClick={() => {
+          navigate("/app/profile");
+        }}
+      >
+        Profile
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item
@@ -48,18 +46,21 @@ function AppNavbar() {
       </div>
 
       <div style={{ marginLeft: "auto" }}>
-        <div style={{ padding: "3px 20px 0px 0px" }}>
+        <div
+          style={{ padding: "4px 20px 0px 0px" }}
+          onClick={() => {
+            navigate("/app/support");
+          }}
+        >
           <Tooltip placement="bottom" title={text}>
-            <Link to="support">
-              <i
-                className="fas fa-envelope"
-                style={{
-                  marginRight: "-20px",
-                  color: "#8692b0",
-                  fontSize: "20px",
-                }}
-              ></i>
-            </Link>
+            <i
+              className="fas fa-envelope link-to-supprt"
+              style={{
+                marginRight: "-20px",
+                color: "#8692b0",
+                fontSize: "20px",
+              }}
+            ></i>
           </Tooltip>
         </div>
       </div>
