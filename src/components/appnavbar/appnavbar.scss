@@ -3,5 +3,28 @@
     top: 0;
     left: 130px;
     width: calc(100% - 130px);
-    border-bottom: 1px solid rgb(167, 156, 156);
+    border-bottom: 1px solid #e6e7eb;
+    padding: 3px 30px 0px 30px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+}
+
+.user_Name {
+    padding-right: 10px;
+    margin-left: -10px;
+    font-size: 17px;
+}
+
+.navbar-dropdown {
+    width: 13%;
+    .ant-dropdown-menu-item:hover,
+    .ant-dropdown-menu-submenu-title:hover {
+        background-color: #c9f4ff;
+        color: #007bfc;
+    }
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+        font-size: 16px;
+    }
 }
