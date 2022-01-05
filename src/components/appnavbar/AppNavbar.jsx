@@ -46,7 +46,7 @@ function AppNavbar() {
       </div>
 
       <div
-        style={{ marginLeft: "auto", display: "flex", alignItems: "center" }}
+        style={{ marginLeft: "auto", display: "flex", alignItems: "stretch" }}
       >
         <div
           onClick={() => {
@@ -68,43 +68,50 @@ function AppNavbar() {
           </Tooltip>
         </div>
       </div>
-      <Dropdown
-        overlay={menu}
-        placement="bottomRight"
-        trigger={["hover", "click"]}
-        arrow
-        overlayClassName={"navbar-dropdown"}
+      <div
+        style={{
+          display: "flex",
+        }}
       >
-        <div
-          style={{
-            fontSize: "17px",
-            color: "#8692b0",
-            paddingRight: "30px",
-            display: "flex",
-            alignItems: "baseline",
-            paddingTop: "4px",
-          }}
+        <Dropdown
+          overlay={menu}
+          placement="bottomRight"
+          trigger={["hover", "click"]}
+          arrow
+          overlayClassName={"navbar-dropdown"}
         >
-          <i
-            className="fas fa-user-circle"
-            style={{ marginLeft: "20px", marginRight: "15px" }}
-          ></i>
-          <span
-            className="user_Name"
+          <div
             style={{
+              fontSize: "17px",
+              color: "#8692b0",
+              paddingRight: "30px",
               display: "flex",
               alignItems: "center",
+              position: "relative",
             }}
           >
-            Mr.Alex
-          </span>
-          <span style={{ position: "relative" }}>
-            <span style={{ position: "absolute", top: "-17px" }}>
-              <MdKeyboardArrowDown />
+            <i
+              className="fas fa-user-circle"
+              style={{ marginLeft: "20px", marginRight: "10px" }}
+            ></i>
+            <span
+              className="user_Name"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                paddingRight: "5px",
+              }}
+            >
+              Mr.Alex
             </span>
-          </span>
-        </div>
-      </Dropdown>
+            <span>
+              <span style={{ position: "absolute", top: "8px" }}>
+                <MdKeyboardArrowDown />
+              </span>
+            </span>
+          </div>
+        </Dropdown>
+      </div>
     </div>
   );
 }
