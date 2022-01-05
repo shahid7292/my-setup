@@ -1,14 +1,25 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import "./appnavbar.scss";
 import cookieService from "../../services/cookies.js";
 import { Menu, Dropdown, Tooltip } from "antd";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function AppNavbar() {
+  const navigate = useNavigate();
   const menu = (
     <Menu>
-      <Menu.Item>Profile</Menu.Item>
+      <Menu.Item>
+        <span
+          onClick={() => {
+            navigate("/app/profile");
+          }}
+        >
+          Profile
+        </span>
+      </Menu.Item>
       <Menu.Divider />
       <Menu.Item
         onClick={() => {
