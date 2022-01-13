@@ -84,7 +84,7 @@ module.exports = {
       },
       //loading image files.
       {
-        test: /\.png|svg|jpg|gif$/,
+        test: /\.png|jpg|gif$/,
         use: ["file-loader"],
       },
 
@@ -95,6 +95,11 @@ module.exports = {
         generator: {
           filename: "assets/fonts/[name][ext]",
         },
+      },
+      // SVG
+      {
+        test: /\.svg$/,
+        type: "asset/inline",
       },
     ],
   },
