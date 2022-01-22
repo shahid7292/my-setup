@@ -7,20 +7,26 @@ import cookieServices from "../../services/cookies.js";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { AiOutlineEyeInvisible, AiFillEye } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { requestLogin } from "../../redux/actions/auth.actions";
 
 function Login() {
+  const dispatch = useDispatch();
   const [form] = Form.useForm();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const handleLogin = () => {
-    if (email == "test@example.com" && password == "123456") {
-      navigate("/app");
+    const successCallback = () => {
       cookieServices().setAppToken({ access: "abcde" });
+      navigate("/app");
       toast.success("Logged in Successfully");
-    } else {
+    };
+
+    const errorCallback = () => {
       toast.error("Invalid credentials");
-    }
+    };
+    dispatch(requestLogin({ email, password }, successCallback, errorCallback));
   };
 
   return (
