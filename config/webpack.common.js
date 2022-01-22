@@ -82,10 +82,14 @@ module.exports = {
           },
         ],
       },
-      //loading image files.
+
+      // Images
       {
-        test: /\.png|jpg|gif$/,
-        use: ["file-loader"],
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[name][ext]",
+        },
       },
 
       // Fonts
